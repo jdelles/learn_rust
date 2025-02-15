@@ -1,0 +1,36 @@
+# Target directory (compiled binaries)
+target/
+
+# Cargo lock file (only for libraries, keep for apps)
+Cargo.lock
+
+# Rust-specific editor files
+*.rs.bk
+
+# Debugging and profiling tools
+*.dSYM/
+*.profraw
+
+# Build artifacts and test logs
+build/
+debug/
+release/
+benchmarks/
+*.o
+*.so
+*.rlib
+*.rmeta
+
+# IDE/Editor files
+.idea
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+
+# MacOS files
+.DS_Store
+
+# Linux temporary files
+*.pid
