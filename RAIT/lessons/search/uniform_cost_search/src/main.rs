@@ -39,6 +39,7 @@ fn search(grid: &[[i32; 6]; 5], init: [usize; 2], cost: i32) -> Result<Vec<(i32,
             g = next_node.0;
             x = next_node.1;
             y = next_node.2;
+            closed_list[x][y] = 1;
 
             if x == GOAL[0] && y == GOAL[1] {
                 return Ok(vec![(g, x, y)]);
@@ -50,7 +51,6 @@ fn search(grid: &[[i32; 6]; 5], init: [usize; 2], cost: i32) -> Result<Vec<(i32,
                         if closed_list[x2][y2] == 0 && grid[x2][y2] == 0 {
                             let g2 = g + cost;
                             open_list.push_back((g2, x2, y2));
-                            closed_list[x2][y2] = 1;
                         }
                     }
                 }
