@@ -15,7 +15,10 @@ fn main() {
     ];
 
     for day in 1..=12 {
-        println!("On the {} day of Christmas my true love gave to me:", ordinal(day));
+        println!(
+            "On the {} day of Christmas my true love gave to me:",
+            ordinal(day)
+        );
         for verse in (0..day).rev() {
             println!("{}", VERSES[verse]);
         }

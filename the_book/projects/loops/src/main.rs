@@ -17,7 +17,7 @@ fn main() {
         loop {
             println!("remaining = {remaining}");
             if remaining == 9 {
-                break
+                break;
             }
             if count == 2 {
                 break 'counting_up;
@@ -51,4 +51,3 @@ fn main() {
     }
     println!("LIFTOFF!!!");
 }
-

@@ -23,7 +23,10 @@ impl Rectangle {
 
 impl Rectangle {
     fn square(size: u32) -> Rectangle {
-        Rectangle { width: size, height: size }
+        Rectangle {
+            width: size,
+            height: size,
+        }
     }
 }
 
@@ -38,10 +41,7 @@ fn main() {
     let name = user1.username;
     user1.username = String::from("jdelles");
 
-    let user2 = build_user(
-        String::from("someone@mail.com"), 
-        String::from("someone"),
-    );
+    let user2 = build_user(String::from("someone@mail.com"), String::from("someone"));
 
     let user3 = User {
         email: String::from("bobbo@mail.com"),

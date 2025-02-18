@@ -12,14 +12,13 @@ const INIT: [usize; 2] = [0, 0];
 const GOAL: [usize; 2] = [GRID.len() - 1, GRID[0].len() - 1];
 const COST: i32 = 1;
 
-const DELTA: [[i32; 2]; 4] = [
-    [-1,  0],
-    [ 0, -1],
-    [ 1,  0],
-    [ 0,  1],
-];
+const DELTA: [[i32; 2]; 4] = [[-1, 0], [0, -1], [1, 0], [0, 1]];
 
-fn search(grid: &[[i32; 6]; 5], init: [usize; 2], cost: i32) -> Result<Vec<(i32, usize, usize)>, &'static str> {
+fn search(
+    grid: &[[i32; 6]; 5],
+    init: [usize; 2],
+    cost: i32,
+) -> Result<Vec<(i32, usize, usize)>, &'static str> {
     let mut closed_list = vec![vec![0; grid[0].len()]; grid.len()];
     closed_list[init[0]][init[1]] = 1;
 
