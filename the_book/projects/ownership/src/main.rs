@@ -1,15 +1,15 @@
 fn main() {
     /*
-        Ownership Rules: 
-            1. Each value in Rust has a variable that’s called its owner.
-            2. There can only be one owner at a time.
-            3. When the owner goes out of scope, the value will be dropped.
-     */
+       Ownership Rules:
+           1. Each value in Rust has a variable that’s called its owner.
+           2. There can only be one owner at a time.
+           3. When the owner goes out of scope, the value will be dropped.
+    */
 
-     let s = String::from("hello"); // s is valid from this point forward
+    let s = String::from("hello"); // s is valid from this point forward
 
-     let x = 5;
-     let y = x; // copy
+    let x = 5;
+    let y = x; // copy
 
     let s1 = String::from("hello");
     // let s2 = s1; // move  (s1 no longer valid)
