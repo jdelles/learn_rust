@@ -1,11 +1,11 @@
 mod front_of_house;
 pub use crate::front_of_house::hosting;
 
+use rand::{CryptoRng, ErrorKind::Transient, Rng};
 use std::fmt::Result;
 use std::io::Result as IoResult;
+use std::io::*;
 use std::io::{self, Write};
-use std::io::*
-use rand::{Rng, CryptoRng, ErrorKind::Transient};
 
 pub fn eat_at_restaurant() {
     // Absolute path

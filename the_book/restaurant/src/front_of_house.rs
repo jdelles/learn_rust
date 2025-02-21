@@ -1,4 +1,3 @@
-
 pub mod hosting;
 
 mod serving {
@@ -10,5 +9,5 @@ mod serving {
     }
     fn take_payment() {
         println!("Take payment");
-    }   
+    }
 }
